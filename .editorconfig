@@ -1,0 +1,50 @@
+# Suppress: EC103
+root = true
+
+[*]
+end_of_line              = crlf
+insert_final_newline     = true
+trim_trailing_whitespace = true
+
+[*.xml]
+indent_style = space : suggestion
+
+[*.{cs,vb}]
+indent_size                                                        = 4 : warning
+indent_style                                                       = space : warning
+dotnet_naming_rule.async_methods_end_in_async.severity             = suggestion
+dotnet_naming_rule.async_methods_end_in_async.style                = end_in_async
+dotnet_naming_rule.async_methods_end_in_async.symbols              = any_async_methods
+dotnet_naming_style.end_in_async.capitalization                    = pascal_case
+dotnet_naming_style.end_in_async.required_suffix                   = Async
+dotnet_naming_symbols.any_async_methods.applicable_accessibilities = *
+dotnet_naming_symbols.any_async_methods.applicable_kinds           = method
+dotnet_naming_symbols.any_async_methods.required_modifiers         = async
+dotnet_sort_system_directives_first                                = true
+dotnet_style_coalesce_expression                                   = true : suggestion
+dotnet_style_collection_initializer                                = true : suggestion
+dotnet_style_explicit_tuple_names                                  = true : warning
+dotnet_style_null_propagation                                      = true : warning
+dotnet_style_object_initializer                                    = true : suggestion
+dotnet_style_predefined_type_for_locals_parameters_members         = true : warning
+dotnet_style_predefined_type_for_member_access                     = true : warning
+dotnet_style_qualification_for_event                               = false : warning
+dotnet_style_qualification_for_field                               = false : warning
+dotnet_style_qualification_for_method                              = false : warning
+dotnet_style_qualification_for_property                            = false : warning
+
+[*.cs]
+csharp_indent_case_contents                           = true : warning
+csharp_indent_switch_labels                           = true : warning
+csharp_new_line_before_catch                          = false : warning
+csharp_new_line_before_else                           = false : warning
+csharp_new_line_before_finally                        = false : warning
+csharp_new_line_before_members_in_anonymous_types     = true : warning
+csharp_new_line_before_members_in_object_initializers = true : warning
+csharp_new_line_before_open_brace                     = none : warning
+csharp_new_line_between_query_expression_clauses      = true : warning
+csharp_prefer_braces                                  = true : warning
+csharp_style_expression_bodied_indexers               = true : suggestion
+csharp_style_expression_bodied_properties             = true : suggestion
+csharp_style_var_for_built_in_types                   = true : suggestion
+csharp_style_var_when_type_is_apparent                = true : suggestion
