@@ -145,7 +145,7 @@ title-separator: "-"
 timezone: "	America/Sao_Paulo"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year/:month/:title/
+permalink: /:year/:month/:slug/
 paginate: 5
 
 kramdown:
