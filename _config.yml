@@ -92,7 +92,6 @@ share-links-active:
   facebook: false
   google: false
   linkedin: true
-  github:true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
@@ -133,7 +132,8 @@ url-pretty: "kelps.net"  # eg. "deanattali.com/beautiful-jekyll"
 
 # Excerpt Word Length
 # Truncates the excerpt to the specified number of words on the index page
-excerpt_length: 50
+# excerpt_length: 50
+excerpt_separator: <!--more-->
 
 # Character used to separate site title and description in HTML document title
 # and RSS feed title
