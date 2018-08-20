@@ -290,3 +290,12 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+# project
+_site
+.vagrant
+
+# general
+.DS_Store
+Thumbs.db
+ehthumbs.db
