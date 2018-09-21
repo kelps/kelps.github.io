@@ -31,7 +31,7 @@ use-site-title: true
       </div>
       {% endif %}
       <div class="post-entry">
-        {{ post.excerpt | xml_escape  }}
+        {{ post.excerpt }}
         {% if post.content != post.excerpt %}
           <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[continuar lendo]</a>
         {% endif %}
