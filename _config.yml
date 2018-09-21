@@ -10,9 +10,6 @@ languages: ["pt-BR"]
 defaultLang: pt-BR
 default_locale: "pt-BR"
 
-languageNames:
-    pt-BR: Português (Brasil)
-
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
