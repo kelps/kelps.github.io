@@ -19,7 +19,7 @@ use-site-title: true
     </a>
 
     <p class="post-meta">
-      Posted on {{ post.date | date: "%B %-d, %Y" }}
+      {{ post.date | date: "%B %-d, %Y" }}
     </p>
 
     <div class="post-entry-container">
@@ -31,9 +31,9 @@ use-site-title: true
       </div>
       {% endif %}
       <div class="post-entry">
-        {{ post.excerpt | strip_html | xml_escape  }}
+        {{ post.excerpt | xml_escape  }}
         {% if post.content != post.excerpt %}
-          <a href="{{ post.url | prepend: site.baseurl }}#more" class="post-read-more">[continuar lendo]</a>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[continuar lendo]</a>
         {% endif %}
       </div>
     </div>
@@ -59,12 +59,12 @@ use-site-title: true
 <ul class="pager main-pager">
   {% if paginator.previous_page %}
   <li class="previous">
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Posts Mais Recentes</a>
   </li>
   {% endif %}
   {% if paginator.next_page %}
   <li class="next">
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Posts Mais Antigos &rarr;</a>
   </li>
   {% endif %}
 </ul>
