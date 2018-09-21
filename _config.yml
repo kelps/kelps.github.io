@@ -6,6 +6,8 @@
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
 url: "http://kelps.github.io"
 baseurl: ""
+defaultLang: pt-BR
+default_locale: "pt-BR"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
 
@@ -74,9 +76,9 @@ social-network-links:
   twitter: kelps
 #  reddit: yourname
 #  google-plus: +DeanAttali
-#  linkedin: kelps
+  linkedin: kelps
 #  xing: yourname
-#  stackoverflow: "3943160/daattali"
+  stackoverflow: "770522/kelps"
 #  snapchat: deanat78
 #  instagram: deanat78
 #  youtube: user/deanat78

@@ -33,7 +33,7 @@ use-site-title: true
       <div class="post-entry">
         {{ post.excerpt | strip_html | xml_escape  }}
         {% if post.content != post.excerpt %}
-          <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
+          <a href="{{ post.url | prepend: site.baseurl }}#more" class="post-read-more">[continuar lendo]</a>
         {% endif %}
       </div>
     </div>
