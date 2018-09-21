@@ -5,71 +5,93 @@ date: 2016-08-24T09:33:00.0010000-03:00
 permalink: /:year/:month/:slug:output_ext
 ---
 
-      <p>Em outubro eu fiz um <a href="http://blog.kelps.net/2015/10/loading-usando-apenas-css.html" target="_blank">post mostrando como criar e usar uma cortina de loading usando CSS</a>. Uma coisa muito boa daquela abordagem é que sua implementação não depende de nenhum markup html extra nas páginas. O visual é criado 100% em CSS e para usar basta acrescentar o class “loading” no body da página usando um javascript bem simples.</p> <p>Desde então o projeto onde usei esse loading evoluiu e eu fiz algumas melhorias naquela implementação:</p> <ul> <li>O loading antes funcionava apenas no body da página, agora funciona em elementos individuais também (div, por exemplo)  <li>O loading não é mais imediato, passando a aparecer de forma gradual apenas após 1.2s da solicitação, assim se o processamento for muito rápido o overlay não aparece. Além disso a apresentação gradual do loading é mais agradável visualmente.  <li>O loading agora protege a página/elemento contra cliques, assim o usuário não conseguirá clicar novamente em botões ou elementos da página enquanto o loading estiver definido, mesmo dentro do período de 1.2s descrito acima.</li></ul> <a name='more'></a> <p>Comecei mudando o CSS body.loading:after para .loading:after e trocando seu position de fixed para absolute. Isso faz com que ele passe a funcionar em qualquer elemento. Depois disso eu acrescentei uma série de outros estilos no CSS. Para facilitar a compreensão eu coloquei comentários explicativos a seguir:</p><pre>/*animações que serão usadas para exibir o overlay de loading. Estão repetidas 3 vezes mudando apenas o prefixo para oferecer suporte no maior número possível de browsers.*/
-      <br />/*A animação vai durar 2s, sendo que nos primeiros 60% o overlay estará invisível e a partir daí aparecerá gradualmente até atingir 60% de opacidade*/
-      <br />@-moz-keyframes loading-anim {
-      <br />  0%,
-      <br />  60% {
-      <br />    opacity: 0;
-      <br />  }
-      <br />  100% {
-      <br />    opacity: 0.6;
-      <br />  }
-      <br />}
-      <br />@-webkit-keyframes loading-anim {
-      <br />  0%,
-      <br />  60% {
-      <br />    opacity: 0;
-      <br />  }
-      <br />  100% {
-      <br />    opacity: 0.6;
-      <br />  }
-      <br />}
-      <br />@keyframes loading-anim {
-      <br />  0%,
-      <br />  60% {
-      <br />    opacity: 0;
-      <br />  }
-      <br />  100% {
-      <br />    opacity: 0.6;
-      <br />  }
-      <br />}
-      <br />
-      <br />/*muda o ponteiro do mouse e faz com que cliques parem de funcionar para evitar processamento duplicado*/
-      <br />.loading{
-      <br />  cursor:wait;
-      <br />  pointer-events:none;
-      <br />}
-      <br />
-      <br />/*faz o loading que não for no body aparecer apenas sobre o elemento sofrendo loading (por isso foi alterado de fixed para absolute)*/
-      <br />body .loading{
-      <br />  position:relative;
-      <br />}
-      <br />
-      <br />/*muda o loading do body de volta para fixed e limita seu tamanho para o tamanho da janela*/
-      <br />body.loading:after{
-      <br />  position:fixed;
-      <br />  max-width:100vw;
-      <br />  max-height:100vh;
-      <br />}
-      <br />
-      <br />/*acrescentadas as chamadas à animação definindo seu tempo em 2s*/
-      <br />.loading:after {
-      <br />    opacity: 0.6;
-      <br />  -moz-animation: loading-anim 2s ease-in-out;
-      <br />  -o-animation: loading-anim 2s ease-in-out;
-      <br />  -webkit-animation: loading-anim 2s ease-in-out;
-      <br />  animation: loading-anim 2s ease-in-out;
-      <br />    pointer-events:auto;
-      <br />    content: "";
-      <br />    cursor: wait;
-      <br />    position: absolute;
-      <br />    left: 0;
-      <br />    top: 0;
-      <br />    right: 0;
-      <br />    bottom: 0;
-      <br />    background: rgba(0,0,0,.7) url("data:image/gif;base64,...") no-repeat center center;
-      <br />} </pre>
-      <p>Abaixo tem um CodePen mostrando o código acima em funcionamento. </p>
-      <div><iframe id="cp_embed_RRmYYy" title="CodePen Embed" class="cp_embed_iframe " style="overflow: hidden; width: 100%" height="327" src="//codepen.io/kelps/embed/RRmYYy?height=327&theme-id=0&slug-hash=RRmYYy&default-tab=result&user=kelps" frameborder="0" allowtransparency name="CodePen Embed" scrolling="no" allowfullscreen="true"></iframe></div>
-    
+<p>Em outubro eu fiz um <a href="http://blog.kelps.net/2015/10/loading-usando-apenas-css.html" target="_blank">post mostrando como criar e usar uma cortina de loading usando CSS</a>. Uma coisa muito boa daquela abordagem é que sua implementação não depende de nenhum markup html extra nas páginas. O visual é criado 100% em CSS e para usar basta acrescentar o class “loading” no body da página usando um javascript bem simples.</p>
+<p>Desde então o projeto onde usei esse loading evoluiu e eu fiz algumas melhorias naquela implementação:</p>
+<ul>
+    <li>O loading antes funcionava apenas no body da página, agora funciona em elementos individuais também (div, por exemplo)
+    <li>O loading não é mais imediato, passando a aparecer de forma gradual apenas após 1.2s da solicitação, assim se o processamento for muito rápido o overlay não aparece. Além disso a apresentação gradual do loading é mais agradável visualmente.
+    <li>O loading agora protege a página/elemento contra cliques, assim o usuário não conseguirá clicar novamente em botões ou elementos da página enquanto o loading estiver definido, mesmo dentro do período de 1.2s descrito acima.</li>
+</ul> <!--more-->
+<p>Comecei mudando o CSS body.loading:after para .loading:after e trocando seu position de fixed para absolute. Isso faz com que ele passe a funcionar em qualquer elemento. Depois disso eu acrescentei uma série de outros estilos no CSS. Para facilitar a compreensão eu coloquei comentários explicativos a seguir:</p>
+
+<pre class="highlight">/*animações que serão usadas para exibir o overlay de loading. Estão repetidas 3 vezes mudando apenas o prefixo para oferecer suporte no maior número possível de browsers.*/
+<code>
+/*A animação vai durar 2s, sendo que nos primeiros 60% o overlay estará invisível e a partir daí aparecerá gradualmente até atingir 60% de opacidade*/
+@-moz-keyframes loading-anim {
+  0%,
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+@-webkit-keyframes loading-anim {
+  0%,
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+@keyframes loading-anim {
+  0%,
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+
+
+
+
+/*muda o ponteiro do mouse e faz com que cliques parem de funcionar para evitar processamento duplicado*/
+.loading{
+  cursor:wait;
+  pointer-events:none;
+}
+
+
+
+/*faz o loading que não for no body aparecer apenas sobre o elemento sofrendo loading (por isso foi alterado de fixed para absolute)*/
+body .loading{
+  position:relative;
+}
+
+
+
+/*muda o loading do body de volta para fixed e limita seu tamanho para o tamanho da janela*/
+body.loading:after{
+  position:fixed;
+  max-width:100vw;
+  max-height:100vh;
+}
+
+
+
+/*acrescentadas as chamadas à animação definindo seu tempo em 2s*/
+.loading:after {
+    opacity: 0.6;
+  -moz-animation: loading-anim 2s ease-in-out;
+  -o-animation: loading-anim 2s ease-in-out;
+  -webkit-animation: loading-anim 2s ease-in-out;
+  animation: loading-anim 2s ease-in-out;
+    pointer-events:auto;
+    content: "";
+    cursor: wait;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.7) url("data:image/gif;base64,...") no-repeat center center;
+}
+    </code>
+</pre>
+<p>Abaixo tem um CodePen mostrando o código acima em funcionamento. </p>
+<div><iframe id="cp_embed_RRmYYy" title="CodePen Embed" class="cp_embed_iframe " style="overflow: hidden; width: 100%" height="327" src="//codepen.io/kelps/embed/RRmYYy?height=327&theme-id=0&slug-hash=RRmYYy&default-tab=result&user=kelps" frameborder="0" allowtransparency name="CodePen Embed" scrolling="no" allowfullscreen="true"></iframe></div>
+
