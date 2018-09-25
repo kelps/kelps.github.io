@@ -1,0 +1,8 @@
+﻿---
+layout: blogger
+title: CNZK Web Library no CodePlex - Agilizando o desenvolvimento em ASP.NET
+date: 2008-03-27T23:45:00.0010000-03:00
+permalink: /:year/:month/:slug:output_ext
+tags: [ASP.NET]
+---
+<p>Acabo de criar um projeto no <a href="http://www.codeplex.com">CodePlex</a> para desenvolvimento de uma biblioteca de componentes reutilizáveis para agilizar o desenvolvimento de web sites utilizando ASP.NET 2.0 e superior.</p>  <p><a href="http://www.codeplex.com/CnzkWebLibrary">CNZK Web Library</a></p>  <p>Jà disponibilizei uma primeira versão para download contendo um HttpHandler para gerar miniaturas de imagens de uma forma extremamente simples. Segue abaixo um exemplo:</p>  <p>URI da imagem original:   <br />img/imagem-original.jpg</p>  <p>URI da imagem redimensionada para 200 x 150:   <br />img/imagem-original.jpg.200x150.thumb.axd</p>  <p>A imagem redimensionada fica armazenada em cache para evitar sobrecarga no processador do servidor. Além disso, se for solicitado o redimensionamento de uma imagem inexistente, será gerada uma imagem com o texto "Imagem não disponível". Isso nos poupa o trabalho de ficar verificando se uma imagem existe ou não antes de escrever sua url na página.</p>  <p>Em breve vou fazer um post entrando em maiores detalhes do código e explicando os conceitos envolvidos. Até lá, façam download, utilizem e me deixem saber o que acham.</p>  
