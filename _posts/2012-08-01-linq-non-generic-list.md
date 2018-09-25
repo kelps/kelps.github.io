@@ -16,7 +16,7 @@ Para não ter que colocar loopings no código apenas para migrar de não generic
 
 Ou seja, para listas de objetos em código legado não generic mas onde o tipo é conhecido e garantido, a primeria opção é melhor. Para outros casos, use a segunda. Abaixo tem um pequeno exemplo de uso desse código:
 
-```
+```csharp
 var col = new Collection();
 col.Add("text");
 col.Add("text2");
