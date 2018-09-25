@@ -9,6 +9,7 @@ tags: [Dicas, LINQ]
 
 <pre class="highlight">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <pre class="highlight">
 <code>
+<![CDATA[
 var col = new Collection();
 col.Add("text");
 col.Add("text2");
@@ -17,12 +18,14 @@ col.Add("text4");
 
 var keysCast = col.Cast<string>();
 var keysOfType = col.OfType<string>();
-    
-var resultadoT = (from k in keysOfType 
+
+var resultadoT = (from k in keysOfType
                   select k).ToArray();
-    
-var resultadoC = (from k in keysCast 
+
+var resultadoC = (from k in keysCast
                   select k).ToArray();
+
+]]>
 </code>
 </pre>
 
