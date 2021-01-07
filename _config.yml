@@ -9,6 +9,7 @@ baseurl: ""
 languages: ["pt-BR"]
 defaultLang: pt-BR
 default_locale: "pt-BR"
+encoding: utf-8
 
 # Of course don't forget to change the username and projectname to YOUR username and project
 
