@@ -18,9 +18,9 @@ use-site-title: true
             {% endif %}
         </a>
 
-        {% assign pdate = page.date | date:"%-m" %}
+        {% assign pdate = post.date | date:"%-m" %}
         <p class="post-meta">
-            {{ page.date | date: "%-d" }} de {% case pdate %}
+            {{ post.date | date: "%-d" }} de {% case pdate %}
             {% when '1' %}janeiro
             {% when '2' %}fevereiro
             {% when '3' %}março
@@ -33,7 +33,7 @@ use-site-title: true
             {% when '10' %}outubro
             {% when '11' %}novembro
             {% when '12' %}dezembro
-            {% endcase %} de {{ page.date | date: "%Y" }}
+            {% endcase %} de {{ post.date | date: "%Y" }}
         </p>
 
         <div class="post-entry-container">
