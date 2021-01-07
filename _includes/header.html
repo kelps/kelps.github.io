@@ -38,7 +38,7 @@
 		  {% if include.type == "post" %}
 			{% assign pdate = page.date | date:"%-m" %}
 			<span class="post-meta">
-				{{ page.date | date: "%-d, %Y" }} de {% case pdate %}
+				{{ page.date | date: "%-d" }} de {% case pdate %}
 				{% when '1' %}janeiro
 				{% when '2' %}fevereiro
 				{% when '3' %}março
@@ -79,7 +79,7 @@
 		  	{% if include.type == "post" %}
 		  	{% assign pdate = page.date | date:"%-m" %}
 		  	<span class="post-meta">
-		  		{{ page.date | date: "%-d, %Y" }} de {% case pdate %}
+		  		{{ page.date | date: "%-d" }} de {% case pdate %}
 		  		{% when '1' %}janeiro
 		  		{% when '2' %}fevereiro
 		  		{% when '3' %}março
