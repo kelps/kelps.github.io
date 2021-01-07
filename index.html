@@ -19,7 +19,7 @@ use-site-title: true
         </a>
 
         {% assign pdate = post.date | date:"%-m" %}
-        <p class="post-meta">
+        <p class="post-meta" title="{{ post.date | date: "%Y-%m-%d" }}">
             {{ post.date | date: "%-d" }} de {% case pdate %}
             {% when '1' %}janeiro
             {% when '2' %}fevereiro
