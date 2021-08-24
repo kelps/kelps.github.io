@@ -1,11 +1,12 @@
 ---
-layout: blogger
-title: Git: Múltiplas configurações no mesmo computador, organizado por subdiretórios
+layout: post
+title: Git com múltiplas configurações no mesmo computador, organizado por subdiretórios
 published: true
 tags: [Controle de Versão, Git]
 ---
 
 Tendo em vista que grande parte do desenvolvimento de software atual padronizou o controle de versão no Git, um novo problema que passou a ocorrer é o fato de que muitas vezes queremos ter configurações diferentes para situações diferentes. Ex.: Queremos usar um nome e e-mail para commits nos nossos trabalhos pessoais ou repositórios Open Source e outro para nossos commits nos repositórios da empresa. Há também situações onde podemos trabalhar como freelance para múltiplos clientes e precisamos usar as plataformas desses clientes, e pode ser necessário usar logins diferentes para cada caso ou mesmo outras configurações do git.
+<!--more-->
 
 É possível fazer isso personalizando as configurações de cada repositório, mas fazendo assim corre-se o risco de cometer erros de configuração ou mesmo de esquecer de personalizar ao baixar o repositório (ou se for necessário baixá-lo novamente).
 
