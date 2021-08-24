@@ -21,7 +21,7 @@ Supondo que tenho no meu computador a seguinte estrutura de pastas:
 
 Nesta estrutura, desejo baixar todos os repositórios de projetos de cada cliente em sua própria pasta e tudo que for github onde eu fizer contribuições pessoais, nas pasta github. Quero que todos os commits nos repositórios do github utilizem o email que uso no github e os projetos de cada cliente utilizem os e-mails que das credenciais que cada cliente me forneceu.
 
-- 1- Para fazer isso, meu primeiro passo foi criar uma pasta onde vou gravar minhas configurações personalizadas. Escolhi criar esta pasta no meu OneDrive pessoal, para que essas configurações fiquem guardadas na nuvem e sejam replicadas nos meus outros computadores ou quando eu formatar este computador possa recuperar as configurações com facilidade. Criei esta pasta em d:\onedrive\git
+- 1- Para fazer isso, meu primeiro passo foi criar uma pasta onde vou gravar minhas configurações personalizadas. Escolhi criar esta pasta no meu OneDrive pessoal, para que essas configurações fiquem guardadas na nuvem e sejam replicadas nos meus outros computadores ou quando eu formatar este computador possa recuperar as configurações com facilidade. Criei esta pasta em **d:\onedrive\git**
 - 2- Nesta pasta, criei um arquivo texto chamado **"gitconfig"** (assim mesmo, sem extensão).
 - 3- Criei também um arquivo para cada subdiretório onde desejo/preciso ter configurações diferentes: **"gitconfig-cliente-1"**, **"gitconfig-cliente-2"**, **"gitconfig-global"**.
 - 4- Editei este arquivo **"gitconfig"** criado no passo 2 para que tenha o conteúdo abaixo:
@@ -66,14 +66,14 @@ Nesta estrutura, desejo baixar todos os repositórios de projetos de cada client
 	defaultbranch = principal
 ```
 
-- 8- Editei o arquivo de configurações padrão do git do meu usuário no computador para importar o **"gitconfig"** criado acima. Este arquivo fica em **"%homepath%\.gitconfig"**. Se não existir o arquivo **".gitconfig"** na pasta **"%homepath%"** do seu computador (Windows), pode criar ele, mas isso provavelmente significa que o Git não está instalado corretamente para o usuário atual ou que não foi usado ainda. Neste arquivo eu apenas acrescentei no final as informações abaixo:
+- 8- Editei o arquivo de configurações padrão do git do meu usuário no computador para importar o **"gitconfig"** criado acima. Este arquivo fica em **"%homepath%\\.gitconfig"**. Se não existir o arquivo **".gitconfig"** na pasta **"%homepath%"** do seu computador (Windows), pode criar ele, mas isso provavelmente significa que o Git não está instalado corretamente para o usuário atual ou que não foi usado ainda. Neste arquivo eu apenas acrescentei no final as informações abaixo:
 
 ```
 [include]
 	path = d:/onedrive/git/gitconfig
 ```
 
-Após seguidos esses passos, o arquivo de configuração padrão **"%homepath%\.gitconfig"** estará importando as configurações do **"gitconfig"** que se encontra na pasta que criei no meu OneDrive. Este por usa vez, importa as configurações do arquivo **"gitconfig-global"** e logo na sequencia faz 2 importações condicionais das configurações específicas de cada cliente. A condição que criei para as importações condicionais foi com base no diretório onde cada repositório de cliente se encontra.
+Após seguidos esses passos, o arquivo de configuração padrão **"%homepath%\\.gitconfig"** estará importando as configurações do **"gitconfig"** que se encontra na pasta que criei no meu OneDrive. Este por usa vez, importa as configurações do arquivo **"gitconfig-global"** e logo na sequencia faz 2 importações condicionais das configurações específicas de cada cliente. A condição que criei para as importações condicionais foi com base no diretório onde cada repositório de cliente se encontra.
 
 Para testar se a configuração ficou correta, basta abrir um prompt de comando no diretório de qualquer repositório e executar o comando ```git config -l```. Todas as instruções de include serão exibidas, mas os conteúdos das configurações condicionais são apareceram se executar o comando em repositórios dentro dos subdiretórios dos clientes. Se executar o comando no subdiretório do cliente 1, a lista de configurações vai mostrar meu e-mail sendo definido 2 vezes, a primeira para o da configuração global e a segunda para o que está na configuração do cliente 1.
 Quaisquer configurações que possam ser realizadas nesses arquivos de configuração do git, podem ser feitas assim.
