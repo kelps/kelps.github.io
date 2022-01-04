@@ -86,12 +86,13 @@ Com isso, temos a solução que descrevi no início deste post. Agora posso cont
 
 #### Painel de comando
 ![Painel Comando Aberto](/img/posts/2022/painel-comando-aberto.png)
-Ignorem o fato de todos os cabos serem amarelos. Quando fiz este painel eu só tinha esta cor na bitola necessária. Vou corrigir isso no futuro quando fizer algum um upgrade ou manutenção neste painel.
+> Ignorem o fato de todos os cabos serem amarelos. Quando fiz este painel eu só tinha esta cor na bitola necessária. Vou corrigir isso no futuro quando fizer um upgrade ou manutenção neste painel.
 
 ![Painel Comando Fechado](/img/posts/2022/painel-comando-fechado.png)
-Botão de acionamento e uma luz de indicação de funcionamento na tampa
+> Botão de acionamento e uma luz de indicação de funcionamento na tampa
 
+#### Interface web do relê Sonoff Mini com Tasmota
 ![Tasmota](/img/posts/2022/tasmota.png)
-Tela de controle direto do relê Sonoff com firmware Tasmota acessível pelo browser.
+> Tela de controle direto do relê Sonoff com firmware Tasmota acessível pelo browser.
 
-Eu também configurei regras na nossa Alexa para conseguir acionar e desligar a bomba da piscina usando comando de voz.
+Após tudo pronto e funcionando eu também configurei regras na nossa Alexa para conseguir acionar e desligar a bomba da piscina usando comando de voz.
