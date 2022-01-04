@@ -11,7 +11,7 @@ Como automatizar uma bomba de piscina usando Sonoff Mini e algum conhecimento so
 
 ### Funcionamento
 
-![Painel Comando Aberto](//img/posts/2022/painel-comando-aberto.png)
+![Painel Comando Aberto](/img/posts/2022/painel-comando-aberto.png)
 
 Um disjuntor é usado para permitir desativar completamente o painel de comando, assim como proteger contra sobrecarga elétrica. Um relê Sonoff é usado para acionar um mini contator de 10A. Quando o relê aciona, o mini contator aciona a bomba da piscina (assim a carga da bomba recai sobre o mini contator, não sobre o relê). Uma botoeira de comando elétrico de pulsar é usada para acionar manualmente o relê direto no painel. Uma luz led para painel de comando é usada para indicar quando o painel está ligado.
 
@@ -85,13 +85,13 @@ Com isso, temos a solução que descrevi no início deste post. Agora posso cont
 ### Resultado final
 
 #### Painel de comando
-![Painel Comando Aberto](//img/posts/2022/painel-comando-aberto.png)
+![Painel Comando Aberto](/img/posts/2022/painel-comando-aberto.png)
 Ignorem o fato de todos os cabos serem amarelos. Quando fiz este painel eu só tinha esta cor na bitola necessária. Vou corrigir isso no futuro quando fizer algum um upgrade ou manutenção neste painel.
 
-![Painel Comando Fechado](//img/posts/2022/painel-comando-fechado.png)
+![Painel Comando Fechado](/img/posts/2022/painel-comando-fechado.png)
 Botão de acionamento e uma luz de indicação de funcionamento na tampa
 
-![Tasmota](//img/posts/2022/tasmota.png)
+![Tasmota](/img/posts/2022/tasmota.png)
 Tela de controle direto do relê Sonoff com firmware Tasmota acessível pelo browser.
 
 Eu também configurei regras na nossa Alexa para conseguir acionar e desligar a bomba da piscina usando comando de voz.
