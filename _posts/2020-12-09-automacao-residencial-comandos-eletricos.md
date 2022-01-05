@@ -3,7 +3,7 @@ layout: post
 title: Automação residencial de comando elétricos usando Sonoff
 published: true
 date: 2020-12-09T13:28:07.0000000-03:00
-tags: [Automação Residencial,Sonoff]
+tags: [Automação Residencial,Sonoff,DIY]
 ---
 
 ## TLDR
