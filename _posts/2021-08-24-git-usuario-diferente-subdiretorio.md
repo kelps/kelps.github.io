@@ -2,6 +2,7 @@
 layout: post
 title: Git com múltiplas configurações no mesmo computador, organizado por subdiretórios
 published: true
+date: 2021-08-24T09:00:00.0000000-03:00
 tags: [Controle de Versão, Git]
 ---
 
