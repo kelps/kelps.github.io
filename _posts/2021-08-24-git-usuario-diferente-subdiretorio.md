@@ -42,7 +42,7 @@ Nesta estrutura, desejo baixar todos os repositórios de projetos de cada client
 
 ```
 [user]
-	name = Kelps Sousa Alux
+	name = Kelps Leite de Sousa
 	email = meu-email-global@meu-dominio.com.br
 [fetch]
 	prune = true
@@ -54,15 +54,15 @@ Nesta estrutura, desejo baixar todos os repositórios de projetos de cada client
 
 ```
 [user]
-	email = kelps.alux@cliente-1.com.br
+	email = kelps.sousa@cliente-1.com.br
 ```
 
 - 7- No caso do cliente 2, troquei o e-mail de commit pelo e-mail das credenciais fornecidas pelo cliente e a definição de branch padrão também, pois este cliente tem um padrão próprio:
 
 ```
 [user]
-	name = Kelps Sousa Alux (Freelancer)
-	email = kelps.alux@cliente-2.com.br
+	name = Kelps Leite de Sousa (Freelancer)
+	email = kelps.sousa@cliente-2.com.br
 [init]
 	defaultbranch = principal
 ```
