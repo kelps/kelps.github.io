@@ -50,7 +50,29 @@ Agora, após configurar o PI-Hole como DNS primário da minha rede no UDM, e sem
 
 Basicamente, essa configuração diz para o roteador que qualquer soliticação de comunicação nas portas de rede usadas pelo protocolo de DNS deve ser encaminhada para o ip do servidor PI-Hole na rede. Isso ajuda a fechar ainda mais o cerco. Ou seja, agora, mesmo dispositivos "mal comportados" vão acabar passando pelo servidor de DNS oficial da rede.
 
-Depois de todas essas configurações e com 4 listas de bloqueio ativas (contendo mais de 400mil endereços bloqueados), Eu descobri que 30% das soliticações de DNS feitas pelos equipamentos na minha rede são bloqueados. Isso é assustador e mostra o quanto estamos vulneráveis. Absolutamente TODOS dispositivos da minha rede já tiveram alguma solicitação bloqueada. 
+Depois de todas essas configurações e com 4 listas de bloqueio ativas (contendo mais de 400mil endereços bloqueados), Eu descobri que aproximadamente 30% das soliticações de DNS feitas pelos equipamentos na minha rede são bloqueados. Isso é assustador e mostra o quanto estamos vulneráveis. Absolutamente TODOS dispositivos da minha rede já tiveram alguma solicitação bloqueada. 
 
+## Viagem
 
+E para fechar o pacote, temos situação de viagem. Este tópico eu vou apenas iniciar aqui, pois para ficar 100% completo ainda depende de algo que vamos fazer em um dos próximos posts, mas já podemos começar.
+
+A idéia é a seguinte: Quando viajamos, precisamos entrar no wifi do hotel, e muitas vezes precisamos fazer alguns malabarismos para conectar toda vez (entrar em página de login, digitar usuário e senha fornecido pela recepção, ....). E temos que fazer isso em todos dispositivos (laptop, smartphone, ...)
+
+E muitas vezes, queremos acessar conteúdo na TV do hotel usando nossos acessos, mas não é seguro fazer login nas plataformas em um dispositivo que não nos pertence, então a solução que uso hoje é um mini roteador de viagem. 
+
+Para isso, eu comprei um GL-iNet Beryl AX. Ele é um roteador bem pequeno (do tamanho de uma carteira), mas extremamente funcional e atende perfeitamente as necessidades de viagem. Com ele, você chega no hotel, mas ao invés de conectar cada um dos seus dispositivos no hotel, você liga o roteador, conecta nele e depois configura ele para servir como repetidor da rede do hotel. 
+
+Se o hotel só tiver wifi, você pode configurar ele como repetidor de wifi. Se precisar entrar em alguma página no wifi do hotel para fazer login, basta fazer isso no primeiro acesso. Se o hotel tiver rede cabeada, melhor ainda. E em último caso, é possível usar ele também com internet via USB do telefone.
+
+Agora, você só precisa configurar suas credenciais e conectar seus dispositivos no seu roteador. Seus dispositivos não ficarão expostos na rede do hotel pois estão em uma rede isolada apenas sua, mas você terá acesso normal na internet. E para finalizar, pode usar um Amazon Fire Stick ou Google Chromecast ou algum aparelho semelhante, conectar ele na TV do hotel e acessar seus conteúdos, seus vídeos no Youtube, suas playlists de música, seus serviços de streaming, sem se preocupar em vazar os seus dados de login em um dispositivo que não te pertence e sem expor os seus dispositivos diretamente na rede do hotel.
+
+## VPN
+
+O último passo é ter uma VPN. Os roteadores Unifi permitem criar vários tipos de VPN, usando OpenVPN, WireGuard, ou o padrão exclusivo deles chamado Teleport (que é uma implementação própria sobre o padrão WireGuard). As desvantagem de usar OpenVPN ou WireGuard é que você vai precisar de um IP fixo ou de alguma forma de saber o seu IP atual de forma dinâmica, e terá também que configurar desvios de portas (port forward) no roteador da operadora, o que nem sempre é trivial ou as vezes pode nem ser possível. 
+
+Já o padrão Teleport não precisa de nada disso. Ele requer que você tenha uma conta na ui.com (site da Ubiquiti/Unifi), mas depois disso, basta instalar o aplicativo Wifiman da Ubiquiti no seu dispositivo (smartphone android/ios ou computador windows/mac) e conectar na mesma conta, que você será capaz de conectar na sua VPN de qualquer lugar, desde que a porta de VPN usada pelo Teleport esteja aberta na rede onde você estiver. 
+
+E com isso, temos uma infra bem robusta, de manutenção extremamente baixa e altamente confiável
+
+Em um próximo post vou falar sobre a evoluir ainda mais esta rede, mas isso depende de outros serviços que não foram abordados ainda.
 
