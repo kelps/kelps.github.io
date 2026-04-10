@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "http://kelps.net"
+url: "http://blog.kelps.net"
 baseurl: ""
 languages: ["pt-BR"]
 defaultLang: pt-BR
@@ -72,23 +72,23 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: true
-#  email: "blog@kelps.net"
-#  facebook: daattali
+#  email: "blog@kelps.dev"
+#  facebook: 
   github: kelps
   twitter: kelps
-#  reddit: yourname
-#  google-plus: +DeanAttali
+#  reddit: 
+#  google-plus: 
   linkedin: kelps
-#  xing: yourname
+#  xing: 
   stackoverflow: "770522/kelps"
-#  snapchat: deanat78
-#  instagram: kelpssousa
-#  youtube: user/deanat78
-#  spotify: yourname
-#  telephone: +14159998888
-#  steam: deanat78
-#  twitch: yourname
-#  yelp: yourname
+#  snapchat: 
+#  instagram: 
+#  youtube: 
+#  spotify: 
+#  telephone: 
+#  steam: 
+#  twitch: 
+#  yelp: 
 
 # Select which share links to show in posts
 share-links-active:
