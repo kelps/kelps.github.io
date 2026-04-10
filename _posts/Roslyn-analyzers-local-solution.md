@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Analizadores de código Roslyn na solução local sem instalar
+title: Analizadores de cÃ³digo Roslyn na soluÃ§Ã£o local sem instalar
 published: false
-tags: [MSBuild, .NET, Código, Integração Contínua, Roslyn]
+tags: [MSBuild, .NET, CÃ³digo, IntegraÃ§Ã£o ContÃ­nua, Roslyn]
 ---

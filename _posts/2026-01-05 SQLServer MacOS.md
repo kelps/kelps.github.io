@@ -2,7 +2,6 @@
 layout: post
 title: Instalando e usando SQLServer no MacOS 
 published: false
-date: 2026-01-05T13:19:42.0000000-03:00
 tags: [SQL, MacOS, VS Code]
 ---
 
