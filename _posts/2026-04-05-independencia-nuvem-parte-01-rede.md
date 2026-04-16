@@ -3,7 +3,7 @@ layout: post
 title: Independência da Nuvem - parte 1 - Rede
 published: true
 date: 2026-04-05T13:28:07.0000000-03:00
-tags: [Synology, NAS, Tailscale, Plex, Sonarr, Radarr, Audiobookshelf, PI-Hole, Immich, Unifi, Enpass, cloud]
+tags: [PI-Hole, Unifi, cloud]
 ---
 
 Este é primeiro de uma série de posts que estou preparando para descrever de forma detalhada como estou fazendo para reduzir minha dependência de diversos serviços online, de forma segura, prática e agradável de usar. Nestes posts vou falar sobre os serviços que estou usando e detalhar como foram configurados e as decisões que levaram às escolhas que foram feitas.
